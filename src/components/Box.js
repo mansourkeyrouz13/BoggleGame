@@ -13,6 +13,10 @@ export const Box = ({ value, boxToBoard, idx}) => {
 
   const handleClick = e => {
     console.log(e.target.id);
+    if(e.target.id == 25)
+    {
+  
+    }
   };
 
     return (

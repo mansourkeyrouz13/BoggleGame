@@ -1,0 +1,13 @@
+.timer-wrapper
+{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+h6
+{
+    color: rgb(212, 8, 8);
+    font-size: 18px;
+    margin-bottom: 0em;
+}

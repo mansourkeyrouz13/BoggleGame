@@ -5,6 +5,7 @@ import {Validate} from './Validate';
 import "./Board.css"
 import Axios from "axios"
 
+
 export const Board = ({ board}) => {
 
   var uniqueKey = 1;
@@ -65,6 +66,7 @@ export const Board = ({ board}) => {
   }
 
   return (
+    <div>
     <div className="board">
       {
         board.map((value, idx) => {
@@ -72,6 +74,7 @@ export const Board = ({ board}) => {
         })
       }
          <Validate validateWord={validateWord} message={message}/>
+    </div>
     </div>
   )
 }

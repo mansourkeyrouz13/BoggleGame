@@ -1,6 +1,7 @@
 import './App.css';
 import {Board} from './components/Board';
 import { useState } from 'react';
+import {Timer} from './components/Timer';
 
 function App() {
   const alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -19,7 +20,9 @@ function App() {
 
 
   return (
+   
     <div className="App">
+      <Timer></Timer>
       <Board board={board} ></Board>
     </div>
   );
