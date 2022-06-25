@@ -1,0 +1,45 @@
+.welcome-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+h1
+{
+    margin-bottom: 0;
+}
+.title-wrapper,.time-input-wrapper
+{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.time-input-wrapper h3
+{
+    color: #444447;
+    font-weight: 500;
+}
+.title-wrapper h1
+{
+    color: #444447;
+    font-weight: 700;
+    font-size: 28px;
+}
+.time-sub
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+input
+{
+border-color: #fcc95a;
+font-family: 'Montserrat', sans-serif;
+}
+a
+{
+    text-decoration: none;
+    color: #444447;
+}

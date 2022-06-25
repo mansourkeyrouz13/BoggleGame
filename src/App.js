@@ -1,30 +1,17 @@
 import './App.css';
-import {Board} from './components/Board';
-import { useState } from 'react';
-import {Timer} from './components/Timer';
+import {Welcome} from './components/Welcome';
+import {Game} from './components/Game';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 function App() {
-  const alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-  const N = 25;
-  const board = [];
-
-  const fillBoards = (x) => {
-  for(var i=0; i<x; i++)
-  {
-    board.push(alphabets[Math.floor(Math.random()*alphabets.length)]);
-  }
-  }  
-
-  fillBoards(N);
-
-
 
   return (
-   
-    <div className="App">
-      <Timer></Timer>
-      <Board board={board} ></Board>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Welcome/>}></Route>
+        <Route path='/game/:time' element={<Game/>}></Route>
+      </Routes>
+    </Router>
   );
 }
 

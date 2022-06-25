@@ -2,15 +2,18 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import './Timer.css'
 
-export const Timer = ()=> {
-    const [seconds, setSeconds] = useState(0)
-    const [minutes, setMinutes] = useState(5)
+export const Timer = ({time})=> {
+    time=time.toString()
+    let minute = parseInt(time.split(':')[0]);
+    let second = parseInt(time.split(':')[1]);
+    
+
+    const [seconds, setSeconds] = useState(second)
+    const [minutes, setMinutes] = useState(minute)
 
     function updateTime() {
         if (minutes == 0 && seconds == 0) {
-          //reset
-          setSeconds(0);
-          setMinutes(5);
+        console.log('Game Over')
         }
         else {
           if (seconds == 0) {
@@ -24,7 +27,6 @@ export const Timer = ()=> {
 
       useEffect(() => {
         const token = setTimeout(updateTime, 1000)
-    
         return function cleanUp() {
           clearTimeout(token);
         }
