@@ -1,0 +1,31 @@
+.validate-wrapper
+{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70rem;
+    margin-left: 305px;
+}
+
+.validate
+{
+    outline: none;
+    border: none;
+    background-color: #fcc95a;
+    color:#444447;
+    padding: 0.5em;
+    border-radius: 0em;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.validate:hover
+{
+    cursor: pointer;
+    background-color: #f5bb3e;
+}
+.message-wrapper
+{
+    margin-left: 0.5rem;
+}

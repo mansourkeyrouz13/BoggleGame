@@ -1,0 +1,21 @@
+.Box
+{
+    background-color: #f4f2f2;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: #444447;
+    margin: 0.25rem;
+    outline: 0;
+    border: 0;
+}
+
+.Box:hover
+{
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
