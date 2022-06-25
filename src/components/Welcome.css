@@ -6,6 +6,7 @@
     text-align: center;
     min-height: 100vh;
     flex-direction: column;
+    
 }
 h1
 {
@@ -42,4 +43,17 @@ a
 {
     text-decoration: none;
     color: #444447;
+}
+.image-wrapper img
+{
+    width: 20%;
+    height: auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .image-wrapper img
+{
+    width: 40%;
+    height: auto;
+}
 }
