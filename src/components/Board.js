@@ -2,11 +2,12 @@ import React from 'react'
 import { useState } from 'react';
 import { Box } from "./Box";
 import {Validate} from './Validate';
+import {Timer} from './Timer';
 import "./Board.css"
 import Axios from "axios"
+import { Result } from "./Result";
 
-
-export const Board = ({ board}) => {
+export const Board = ({ board, time}) => {
 
   var uniqueKey = 1;
 
@@ -22,6 +23,7 @@ export const Board = ({ board}) => {
   const [message, setMessage] = useState('');
   const [totalCorrect, settotalCorrect] = useState(0);
   const [totalWrong, settotalWrong] = useState(0);
+  const [timeUp, setTimeUp] = useState(false);
 
   const boxToBoard = (value) => {
     setWord(current => [...current, value]);
@@ -34,11 +36,13 @@ export const Board = ({ board}) => {
 
   const validateWord = () => {
     console.log('Validate is clicked')
+    console.log(finalWord)
     word.map((v)=>finalWord=finalWord.concat(v.value))
     console.log("final Word: "+finalWord)
     if(finalWord.length < 3)
     {
       setMessage(miniumThree)
+      resetWord();
     }
     else
     {
@@ -58,6 +62,7 @@ export const Board = ({ board}) => {
         {
           console.log('Word does not exist');
           setMessage(notExists);
+          settotalWrong(totalWrong + 1)
           resetWord();
         }
       }
@@ -65,9 +70,12 @@ export const Board = ({ board}) => {
     }
   }
 
+
+
   return (
     <div>
-    <div className="board">
+      <Timer time={time} correctNum={totalCorrect} inCorrectNum={totalWrong} ></Timer>
+    <div className="board" style={{visibility: timeUp ? 'hidden' : 'visible'}}>
       {
         board.map((value, idx) => {
           return <Box value={value} key={uniqueKey++} boxToBoard={boxToBoard} idx={idx+1}/>;

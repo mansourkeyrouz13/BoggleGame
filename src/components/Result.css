@@ -1,0 +1,55 @@
+.results-wrapper
+{
+    position: relative;
+    width: 38%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #444447;
+    margin-top: 1.25rem;
+}
+.words-wrapper
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+.center h4
+{
+    margin-bottom: 0em;
+    margin-top: 0.45em;
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+}
+h4{
+    font-size: 20px;  
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    color: white;
+}
+.center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.try-again-btn
+{
+    margin-bottom: 1em;
+}
+.results-word
+{
+    margin-top: 0.2em;
+    color: white;
+    margin-bottom: 1.65em;
+}
+.results-word h5
+{
+    margin-top: 0.45em;
+    margin-bottom: 0.45em;
+    font-weight: 400;
+    font-size: 18px;
+}

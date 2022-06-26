@@ -11,8 +11,9 @@ export const Game = ()=> {
     const board = [];
 
     let { time } = useParams(); 
+    
     useEffect(() => {
-        console.log(`/game/${time}`);
+        //console.log(`/game/${time}`);
      }, []);
 
     const fillBoards = (x) => {
@@ -25,10 +26,9 @@ export const Game = ()=> {
     fillBoards(N);
 
   return (
-    <div className="App">
-   
-      <Timer time={time}></Timer>
-      <Board board={board} ></Board>
+    <div>
+      {/* <Timer time={time}></Timer> */}
+      <Board board={board} time={time}></Board>
     </div>
 )
 }

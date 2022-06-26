@@ -8,6 +8,7 @@ export const Welcome = ()=> {
     let navigate = useNavigate();
     const [time, setTime] = useState('0:00')
     const [validateMsg, setValidateMsg] = useState('')
+    var letters = /^[A-Za-z]+$/;
 
     const handleChange = event => {
         setTime(event.target.value);
