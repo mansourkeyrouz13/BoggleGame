@@ -10,6 +10,13 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
   
   useEffect (() => {
      setIsActive(false);
+    //  setIsDisabled(false);
+    var buttons = document.getElementsByClassName('Box');
+    for(var i=1; i<buttons.length ; i++)
+    {
+      document.getElementById(i).disabled=false;
+    }
+
   }, [boxInactive]);
 
   const handleClick = e => {

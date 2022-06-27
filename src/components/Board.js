@@ -24,7 +24,7 @@ export const Board = ({ board, time}) => {
   const [totalCorrect, settotalCorrect] = useState(0);
   const [totalWrong, settotalWrong] = useState(0);
   const [timeUp, setTimeUp] = useState(false);
-  const [boxInactive, setBoxInactive] = useState(false);
+  const [boxInactive, setBoxInactive] = useState(0);
 
   const boxToBoard = (value) => {
     setWord(current => [...current, value]);
@@ -36,7 +36,7 @@ export const Board = ({ board, time}) => {
   }
 
   const resetAllBoxes = () => {
-    setBoxInactive(true);
+    setBoxInactive(boxInactive + 1);
     console.log('end of reset')
   }
 
