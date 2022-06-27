@@ -5,7 +5,7 @@ import {Validate} from './Validate';
 import {Timer} from './Timer';
 import "./Board.css"
 import Axios from "axios"
-import { Result } from "./Result";
+
 
 export const Board = ({ board, time}) => {
 
@@ -24,7 +24,7 @@ export const Board = ({ board, time}) => {
   const [totalCorrect, settotalCorrect] = useState(0);
   const [totalWrong, settotalWrong] = useState(0);
   const [timeUp, setTimeUp] = useState(false);
-  const [boxActive, setBoxActive] = useState(false);
+  const [boxInactive, setBoxInactive] = useState(false);
 
   const boxToBoard = (value) => {
     setWord(current => [...current, value]);
@@ -33,6 +33,11 @@ export const Board = ({ board, time}) => {
   // word.map((v)=>console.log(finalWord=finalWord.concat(v.value)))
   const resetWord = () => {
     setWord([]);
+  }
+
+  const resetAllBoxes = () => {
+    setBoxInactive(true);
+    console.log('end of reset')
   }
 
   const validateWord = () => {
@@ -69,7 +74,11 @@ export const Board = ({ board, time}) => {
       }
     });
     }
-    setBoxActive(false);
+    resetAllBoxes();
+    
+  //   setTimeout(() => {
+  //     console.log('end of validation')
+  //  }, 3000);
   }
 
 
@@ -80,7 +89,7 @@ export const Board = ({ board, time}) => {
     <div className="board" style={{visibility: timeUp ? 'hidden' : 'visible'}}>
       {
         board.map((value, idx) => {
-          return <Box value={value} key={uniqueKey++} boxToBoard={boxToBoard} idx={idx+1} boxActive={boxActive}/>;
+          return <Box value={value} key={uniqueKey++} boxToBoard={boxToBoard} idx={idx+1} boxInactive={boxInactive}/>;
         })
       }
          <Validate validateWord={validateWord} message={message}/>
