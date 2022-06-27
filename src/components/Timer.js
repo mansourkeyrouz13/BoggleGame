@@ -20,7 +20,7 @@ export const Timer = ({time, correctNum, inCorrectNum})=> {
         //  setSeconds(seconds => '0' + seconds);
         }
         if (minutes == 0 && seconds == 0) {
-        console.log('Game Over')
+        //console.log('Game Over')
         //setIsOpen(true)
         return;
         }

@@ -6,6 +6,7 @@
     justify-content: center;
     width: 70rem;
     margin-left: 305px;
+    flex-direction: column;
 }
 
 .validate
@@ -27,5 +28,5 @@
 }
 .message-wrapper
 {
-    margin-left: 0.5rem;
+    margin-top: 0.75rem
 }

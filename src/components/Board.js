@@ -24,6 +24,7 @@ export const Board = ({ board, time}) => {
   const [totalCorrect, settotalCorrect] = useState(0);
   const [totalWrong, settotalWrong] = useState(0);
   const [timeUp, setTimeUp] = useState(false);
+  const [boxActive, setBoxActive] = useState(false);
 
   const boxToBoard = (value) => {
     setWord(current => [...current, value]);
@@ -68,6 +69,7 @@ export const Board = ({ board, time}) => {
       }
     });
     }
+    setBoxActive(false);
   }
 
 
@@ -78,7 +80,7 @@ export const Board = ({ board, time}) => {
     <div className="board" style={{visibility: timeUp ? 'hidden' : 'visible'}}>
       {
         board.map((value, idx) => {
-          return <Box value={value} key={uniqueKey++} boxToBoard={boxToBoard} idx={idx+1}/>;
+          return <Box value={value} key={uniqueKey++} boxToBoard={boxToBoard} idx={idx+1} boxActive={boxActive}/>;
         })
       }
          <Validate validateWord={validateWord} message={message}/>
