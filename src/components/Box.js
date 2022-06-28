@@ -185,11 +185,14 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
       const handleStyle = () => {
         setIsActive(true);
     };
+   
     console.log()
     return (
-        <button className='Box' id={idx} style={{backgroundColor: isActive ? '#fcc95a' : '#f4f2f2'}} onClick={(e) => {boxToBoard({value}); handleStyle(); handleClick(e);}}
+      <div style={{backgroundColor: '#fcc95a', padding: '4px'}}>
+        <button className='Box' id={idx} style={{backgroundColor: isActive ? '#f2b046' : '#f4f2f2', border: isActive ? '2px solid #444447' : '0px solid #444447', color: isActive ? '#f9f9f9' : '#444447'}} onClick={(e) => {boxToBoard({value}); handleStyle(); handleClick(e);}}
         disabled={isDisabled}>
           {value}
         </button>
+        </div>
     )
 }
