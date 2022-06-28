@@ -5,10 +5,19 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 }
-
+.sub-time-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+    margin-top: 1.8rem;
+}
 h6
 {
     color: rgb(212, 8, 8);
     font-size: 18px;
     margin-bottom: 0em;
+    margin-top: -0.1em;
+    margin-left: 0.1em;
 }

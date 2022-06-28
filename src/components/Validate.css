@@ -28,5 +28,8 @@
 }
 .message-wrapper
 {
-    margin-top: 0.75rem
+    margin-top: 0.75rem;
+    color: #444447;
+    font-weight: 700;
+    font-size: 18px;
 }

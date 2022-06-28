@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box } from "./Box";
 import {Validate} from './Validate';
 import {Timer} from './Timer';
@@ -15,7 +15,6 @@ export const Board = ({ board, time}) => {
   const miniumThree ="The word must be at least 3 letters";
   const notExists= "Word does not exist";
   const correctWord= "Correct word, continue";
-
 
   const baseDictApiUrl="https://api.dictionaryapi.dev/api/v2/entries/en/";
 
@@ -75,18 +74,25 @@ export const Board = ({ board, time}) => {
     });
     }
     resetAllBoxes();
-    
-  //   setTimeout(() => {
-  //     console.log('end of validation')
-  //  }, 3000);
   }
 
+  const timerToBoard = (minutes, seconds) => {
+    if(minutes == 0 && seconds == 0)
+    {
+      //setTimeUp(true)
+     // document.getElementById('myBoard').disabled=true;
+      var nodes = document.getElementById("myBoard").getElementsByTagName('*');
+      for(var i = 0; i < nodes.length; i++){
+          nodes[i].disabled = true;
+      }
+    }
+  }
 
-
+  // style={{visibility: timeUp ? 'hidden' : 'visible'}}
   return (
     <div>
-      <Timer time={time} correctNum={totalCorrect} inCorrectNum={totalWrong} ></Timer>
-    <div className="board" style={{visibility: timeUp ? 'hidden' : 'visible'}}>
+      <Timer time={time} correctNum={totalCorrect} inCorrectNum={totalWrong} timerToBoard={timerToBoard}></Timer>
+    <div className="board"  id="myBoard">
       {
         board.map((value, idx) => {
           return <Box value={value} key={uniqueKey++} boxToBoard={boxToBoard} idx={idx+1} boxInactive={boxInactive}/>;
