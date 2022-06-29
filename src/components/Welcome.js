@@ -8,10 +8,20 @@ export const Welcome = ()=> {
     let navigate = useNavigate();
     const [time, setTime] = useState('0:00')
     const [validateMsg, setValidateMsg] = useState('')
-    var letters = /^[A-Za-z]+$/;
 
     const handleChange = event => {
+      // console.log(event.target.value);
+      var isValid = /^[0-5]?\d:[0-5]\d$/.test(event.target.value);
+      //var duration = document.getElementById('duration-input')
+      if (isValid) {
+        //duration.style.backgroundColor = '#bfa';
+        setValidateMsg('')
         setTime(event.target.value);
+      } else {
+        //duration.style.backgroundColor = '#fba';
+        console.log('not valid')
+        setValidateMsg('Duration format is not valid')
+      }    
         // console.log('value is:', event.target.value);
       };
 
@@ -26,13 +36,8 @@ export const Welcome = ()=> {
         {
             setValidateMsg("Invalid time entry")
         }
-        else
-        {
-            //console.log('else')
-            setValidateMsg("Time must be greater than 1 minute")
-        }
-        };
 
+        };
    
 
   return (
@@ -52,7 +57,7 @@ export const Welcome = ()=> {
         type="text" 
         onChange={handleChange}
         // onBlur={onBlur}
-        value={time}
+        
         />
 
         <button className="validate" onClick={() => {
