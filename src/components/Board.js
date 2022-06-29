@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Box } from "./Box";
 import {Validate} from './Validate';
 import {Timer} from './Timer';
-import "./Board.css"
+import "./styles/Board.css"
 import Axios from "axios"
 
 

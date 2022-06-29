@@ -1,5 +1,5 @@
 import React from 'react'
-import './Validate.css'
+import './styles/Validate.css'
 
 export const Validate = ({validateWord, message})=> {
   return (

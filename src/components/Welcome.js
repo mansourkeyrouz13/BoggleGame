@@ -1,5 +1,5 @@
 import React from 'react'
-import './Welcome.css'
+import './styles/Welcome.css'
 import { useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom'
 import photo from '../assets/Boggle-Welcome.png';
@@ -12,7 +12,7 @@ export const Welcome = ()=> {
 
     const handleChange = event => {
         setTime(event.target.value);
-        console.log('value is:', event.target.value);
+        // console.log('value is:', event.target.value);
       };
 
 

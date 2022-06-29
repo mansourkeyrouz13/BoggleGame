@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import "./Box.css";
+import "./styles/Box.css";
 
 
 export const Box = ({ value, boxToBoard, idx, boxInactive}) => {

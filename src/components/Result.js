@@ -1,5 +1,5 @@
 import React from 'react'
-import './Result.css'
+import './styles/Result.css'
 import {useNavigate} from 'react-router-dom'
 
 export const Result = ({open, correctNum, inCorrectNum})=> {

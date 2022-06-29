@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import './Timer.css'
+import './styles/Timer.css'
 import { Result } from "./Result";
 import { BiTime } from "react-icons/bi";
 

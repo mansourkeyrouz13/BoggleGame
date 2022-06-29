@@ -1,5 +1,5 @@
 import React from 'react'
-import './GameOver.css'
+import './styles/GameOver.css'
 
 export const GameOver = ()=> {
     
