@@ -29,7 +29,6 @@ export const Board = ({ board, time}) => {
     setWord(current => [...current, value]);
   }
 
-  // word.map((v)=>console.log(finalWord=finalWord.concat(v.value)))
   const resetWord = () => {
     setWord([]);
   }
@@ -79,16 +78,12 @@ export const Board = ({ board, time}) => {
   const timerToBoard = (minutes, seconds) => {
     if(minutes == 0 && seconds == 0)
     {
-      //setTimeUp(true)
-     // document.getElementById('myBoard').disabled=true;
       var nodes = document.getElementById("myBoard").getElementsByTagName('*');
       for(var i = 0; i < nodes.length; i++){
           nodes[i].disabled = true;
       }
     }
   }
-
-  // style={{visibility: timeUp ? 'hidden' : 'visible'}}
   return (
     <div>
       <Timer time={time} correctNum={totalCorrect} inCorrectNum={totalWrong} timerToBoard={timerToBoard}></Timer>

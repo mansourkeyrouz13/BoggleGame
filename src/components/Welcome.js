@@ -10,19 +10,14 @@ export const Welcome = ()=> {
     const [validateMsg, setValidateMsg] = useState('')
 
     const handleChange = event => {
-      // console.log(event.target.value);
       var isValid = /^[0-5]?\d:[0-5]\d$/.test(event.target.value);
-      //var duration = document.getElementById('duration-input')
       if (isValid) {
-        //duration.style.backgroundColor = '#bfa';
         setValidateMsg('')
         setTime(event.target.value);
       } else {
-        //duration.style.backgroundColor = '#fba';
         console.log('not valid')
         setValidateMsg('Duration format is not valid')
       }    
-        // console.log('value is:', event.target.value);
       };
 
 
@@ -56,8 +51,6 @@ export const Welcome = ()=> {
         id="duration-input" 
         type="text" 
         onChange={handleChange}
-        // onBlur={onBlur}
-        
         />
 
         <button className="validate" onClick={() => {

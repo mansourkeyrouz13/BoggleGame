@@ -10,7 +10,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
   
   useEffect (() => {
      setIsActive(false);
-    //  setIsDisabled(false);
     var buttons = document.getElementsByClassName('Box');
     for(var i=1; i<buttons.length ; i++)
     {
@@ -21,7 +20,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
 
   const handleClick = e => {
     let myid = e.target.id;
-    // console.log(myid)
     document.getElementById(myid).disabled=true;
 
     let buttons = document.getElementsByClassName('Box');
@@ -31,7 +29,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
    
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id-5 && i != id-4 && i != id+1 && i != id+5 && i != id+6)
         {
           document.getElementById(i).disabled=true;
@@ -48,7 +45,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
       
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id-6 && i != id-5 && i != id-4 && i != id-1 && i != id+1 && i != id+4 && i != id+5 && i != id+6)
         {
           document.getElementById(i).disabled=true;
@@ -65,7 +61,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
   
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id-6 && i != id-5 && i != id-1 && i != id+4 && i != id+5)
         {
           document.getElementById(i).disabled=true;
@@ -82,7 +77,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
 
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id-1 && i != id+1 && i != id+4 && i != id+5 && i != id+6)
         {
           document.getElementById(i).disabled=true;
@@ -99,7 +93,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
 
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id-6 && i != id-5 && i != id-4 && i != id-1 && i != id+1)
         {
           document.getElementById(i).disabled=true;
@@ -116,7 +109,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
     
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id+1 && i != id+5 && i != id+6)
         {
           document.getElementById(i).disabled=true;
@@ -133,7 +125,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
       
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id-1 && i != id+4 && i != id+5)
         {
           document.getElementById(i).disabled=true;
@@ -150,7 +141,6 @@ export const Box = ({ value, boxToBoard, idx, boxInactive}) => {
  
       for(var i=1; i<buttons.length ; i++)
       {
-        //console.log('loop ok')
         if(i != id-5 && i != id-4 && i != id+1)
         {
           document.getElementById(i).disabled=true;
